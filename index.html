@@ -4,34 +4,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>es.chamber.org.sa</title>
+<title>Certificate Gallery</title>
 
 <style>
 body{
-    margin:0;
-    background:#f2f2f2;
-    font-family:Arial,sans-serif;
-    text-align:center;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f2f2f2;
+text-align:center;
 }
 
-.header{
-    background:#ffffff;
-    padding:15px;
-    box-shadow:0 2px 8px rgba(0,0,0,.2);
+header{
+background:#0056b3;
+color:#fff;
+padding:20px;
+font-size:28px;
+font-weight:bold;
 }
 
-h1{
-    margin:0;
-    font-size:28px;
-    color:#222;
+.container{
+max-width:1000px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:#fff;
+margin:20px auto;
+padding:15px;
+border-radius:12px;
+box-shadow:0 3px 12px rgba(0,0,0,.2);
 }
 
 img{
-    width:95%;
-    max-width:900px;
-    margin-top:20px;
-    border-radius:8px;
-    box-shadow:0 0 10px #999;
+width:100%;
+max-width:900px;
+border-radius:10px;
+}
+
+h2{
+margin:15px 0;
+color:#333;
+}
+
+button{
+margin-top:15px;
+padding:12px 30px;
+background:#0056b3;
+color:#fff;
+border:none;
+border-radius:6px;
+font-size:18px;
+cursor:pointer;
+}
+
+button:hover{
+background:#003f80;
+}
+
+footer{
+margin-top:30px;
+padding:20px;
+background:#fff;
+color:#555;
 }
 </style>
 
@@ -39,11 +74,31 @@ img{
 
 <body>
 
-<div class="header">
-<h1>es.chamber.org.sa</h1>
+<header>
+Certificate Gallery
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Certificate 1</h2>
+<img src="PAK6fqCD.jpg" alt="Certificate 1">
 </div>
 
-<img src="PAK6fqCD.jpg" alt="Certificate">
+<div class="card">
+<h2>Certificate 2</h2>
+<img src="1633265936658.jpeg" alt="Certificate 2">
+</div>
+
+<button onclick="window.scrollTo({top:0,behavior:'smooth'})">
+Back to Top
+</button>
+
+</div>
+
+<footer>
+© 2026 Certificate Gallery
+</footer>
 
 </body>
 </html>
