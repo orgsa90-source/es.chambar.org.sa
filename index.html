@@ -1,4 +1,4 @@
-[7/5, 21:03] ch: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -72,64 +72,61 @@ text-align:center;
 
 .item{
 flex:1;
-padding:20px;
+padding:8px;
+text-align:center;
+text-decoration:none;
+color:#fff;
+display:block;
+min-width:0;
 }
 
-.icon{
-width:70px;
-height:70px;
-border:2px solid #fff;
-border-radius:50%;
+.item:hover{
+color:#fff;
+}
+
+.footer-top{
 display:flex;
+justify-content:space-between;
 align-items:center;
-justify-content:center;
-font-size:32px;
-margin:0 auto 15px;
-}
-
-.item h3{
-font-size:24px;
-font-weight:bold;
-margin-bottom:8px;
-}
-
-.item p{
-font-size:18px;
+flex-wrap:nowrap;
+text-align:center;
 }
 
 .divider{
 width:1px;
-height:120px;
-background:rgba(255,255,255,.4);
-}
-
-footer hr{
-border:none;
-height:1px;
+height:90px;
 background:rgba(255,255,255,.3);
-margin:30px auto;
-max-width:90%;
-}
-[7/5, 21:04] ch: .copy{
-text-align:center;
-font-size:15px;
-line-height:1.8;
-}
-
-.copy a{
-color:#fff;
-text-decoration:none;
-margin:0 8px;
-}
-
-.copy a:hover{
-text-decoration:underline;
 }
 
 @media(max-width:768px){
 
 .footer-top{
-flex-direction:column;
+flex-direction:row;
+}
+
+.divider{
+width:1px;
+height:80px;
+}
+
+.icon{
+width:45px;
+height:45px;
+font-size:20px;
+}
+
+.item h3{
+font-size:12px;
+}
+
+.item p{
+font-size:11px;
+}
+
+.copy{
+font-size:12px;
+}
+
 }
 
 .divider{
