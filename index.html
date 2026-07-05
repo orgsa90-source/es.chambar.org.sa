@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Certificate Verification</title>
 
 <style>
@@ -13,146 +14,79 @@ padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
 }
-
 body{
-background:#f4f6f9;
-min-height:100vh;
-display:flex;
-flex-direction:column;
+    background:#f4f6f9;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 header{
-background:#004B8D;
-padding:18px;
+    background:#004B8D;
+    padding:18px;
 }
 
 .logo{
-height:40px;
-display:block;
+    height:40px;
+    display:block;
 }
 
 .container{
-max-width:800px;
-margin:auto;
-padding:50px 20px;
-flex:1;
+    max-width:800px;
+    margin:auto;
+    padding:50px 20px;
+    flex:1;
 }
 
 .card{
-background:#fff;
-padding:20px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-max-width:500px;
-margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    max-width:500px;
+    margin:auto;
 }
 
 .certificate{
-width:100%;
-display:block;
-border-radius:12px;
+    width:100%;
+    display:block;
+    border-radius:12px;
 }
 
 footer{
-background:#005A9C;
-color:#fff;
-margin-top:auto;
-padding:25px 15px;
+    margin-top:auto;
+    background:#005A9C;
+    color:#fff;
+    padding:20px;
+    text-align:center;
 }
 
-.footer-top{
+.buttons{
 display:flex;
-justify-content:space-between;
-align-items:center;
-text-align:center;
-}
-
-.item{
-flex:1;
-text-decoration:none;
-color:#fff;
-padding:10px;
-display:block;
-}
-.icon{
-width:55px;
-height:55px;
-border:2px solid #fff;
-border-radius:50%;
-display:flex;
-align-items:center;
 justify-content:center;
-font-size:24px;
-margin:0 auto 10px;
+flex-wrap:wrap;
+gap:15px;
+margin-bottom:25px;
 }
 
-.item h3{
-font-size:18px;
-margin-bottom:5px;
-font-weight:bold;
-word-break:break-word;
-}
-
-.item p{
-font-size:13px;
-}
-
-.divider{
-width:1px;
-height:80px;
-background:rgba(255,255,255,.4);
-}
-
-footer hr{
-border:none;
-height:1px;
-background:rgba(255,255,255,.3);
-margin:20px 0;
-}
-
-.copy{
-text-align:center;
-font-size:13px;
-line-height:1.8;
-}
-
-.copy a{
+.btn{
+display:inline-block;
+padding:03px 03px;
+border:1px solid #fff;
+border-radius:03px;
 color:#fff;
 text-decoration:none;
-margin:0 5px;
+font-weight:bold;
 }
 
-@media(max-width:768px){
-
-.footer-top{
-flex-direction:row;
-}
-
-.item{
-padding:5px;
-}
-
-.icon{
-width:42px;
-height:42px;
-font-size:18px;
-}
-.item h3{
-font-size:12px;
-}
-
-.item p{
-font-size:10px;
-}
-
-.divider{
-height:60px;
+.btn:hover{
+background:#fff;
+color:#005A9C;
 }
 
 .copy{
-font-size:11px;
-}
-
+margin-top:05px;
+font-size:05px;
 }
 
 </style>
@@ -179,43 +113,15 @@ font-size:11px;
 
 <footer>
 
-<div class="footer-top">
+<div class="buttons">
 
-<a class="item" href="tel:920024555">
+" href="tel:920024555">📞 Call</a>
 
-<div class="icon">📞</div>
+<a class="btn" href="mailto:info@es.chamber.org.sa">📧 Email</a>
 
-<h3>920024555</h3>
-
-<p>Call Us</p>
-
-</a>
-
-<div class="divider"></div>
-
-<a class="item" href="mailto:info@es.chamber.org.sa">
-
-<div class="icon">✉️</div>
-
-<h3>info@es.chamber.org.sa</h3>
-
-<p>Email Us</p>
-
-</a> <div class="divider"></div>
-
-<a class="item" href="https://es.chamber.org.sa" target="_blank">
-
-<div class="icon">🌐</div>
-
-<h3>es.chamber.org.sa</h3>
-
-<p>Visit Website</p>
-
-</a>
+<a class="btn" href="https://es.chamber.org.sa">🌐 Website</a>
 
 </div>
-
-<hr>
 
 <div class="copy">
 
@@ -223,11 +129,11 @@ font-size:11px;
 
 <br><br>
 
-<a href="#">العربية</a> |
-<a href="#">English (US)</a>
+العربية  | ; English (US)
 
-</div>  </footer>
+</div>
+
+</footer>
 
 </body>
-
 </html>
