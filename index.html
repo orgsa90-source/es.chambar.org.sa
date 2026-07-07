@@ -39,13 +39,38 @@ transition:opacity .8s;
 }
 
 .glow{
-width:170px;
-height:170px;
+width:130px;
+height:130px;
 border-radius:50%;
+background:#fff;
 display:flex;
 justify-content:center;
 align-items:center;
 animation:pulse 2s infinite;
+}
+
+.glow img{
+width:82px;
+height:auto;
+}
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 12px rgba(0,91,156,.20);
+transform:scale(1);
+}
+
+50%{
+box-shadow:0 0 35px rgba(0,91,156,.45);
+transform:scale(1.03);
+}
+
+100%{
+box-shadow:0 0 12px rgba(0,91,156,.20);
+transform:scale(1);
+}
+
 }
 
 .glow img{
