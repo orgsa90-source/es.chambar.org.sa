@@ -1,28 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Certificate Verification</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-*{
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Splash -->
+
+<div id="splash">
+
+<div class="loader">
+
+<img src="logo-blue.png" alt="Logo">
+
+</div>
+
+</div>
+
+<!-- Header -->
+
+<header>
+
+<div class="topbar">
+
+<img src="0003.png" class="logo">
+
+</div>
+
+</header>
+
+<!-- Main -->
+
+<main class="container">
+
+<div class="card">
+
+<div class="title">
+
+<h2>Certificate Verification</h2>
+
+<p>This certificate has been verified successfully.</p>
+
+</div>
+
+<div class="status verified">
+
+<i class="fa-solid fa-circle-check"></i>
+
+Verified
+
+</div>
+
+<div class="certificate">
+
+<img src="1633265936658.jpg" alt="Certificate">
+
+</div>
+
+<div class="info">
+
+<div class="item">
+<span>Certificate No</span>
+<strong>000145879</strong>
+</div>
+
+<div class="item">
+<span>Holder Name</span>
+<strong>Rajab Ali</strong>
+</div>
+
+<div class="item">
+<span>Issue Date</span>
+<strong>10 July 2026</strong>
+</div>
+
+<div class="item">
+<span>Status</span>
+<strong class="green">Verified</strong>
+</div>
+[7/10, 22:34] ch: </div>
+
+<!-- QR Code -->
+
+<div class="qr-section">
+
+<h3>QR Verification</h3>
+
+<img src="qr.png" alt="QR Code" class="qr">
+
+<p class="scan-text">
+Scan this QR code to verify this certificate.
+</p>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="actions">
+
+<button onclick="openCertificate()">
+<i class="fa-solid fa-folder-open"></i>
+Open
+</button>
+
+<button onclick="shareCertificate()">
+<i class="fa-solid fa-share-nodes"></i>
+Share
+</button>
+
+<button onclick="copyCertificate()">
+<i class="fa-solid fa-copy"></i>
+Copy
+</button>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+<div class="footer-content">
+
+<p>© 2026 Asharqia Chamber</p>
+
+<p>العربية | English</p>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+[7/10, 22:35] ch: *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f6f9;
-min-height:100vh;
-display:flex;
-flex-direction:column;
+background:#f4f7fb;
+color:#333;
 }
-
-/* Splash Screen */
 
 #splash{
 position:fixed;
@@ -30,195 +169,347 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#ffffff;
+background:#fff;
 display:flex;
 justify-content:center;
 align-items:center;
-z-index:99999;
-transition:opacity .2s;
+z-index:9999;
 }
 
-.glow{
+.loader{
 width:90px;
 height:90px;
-border-radius:60%;
 display:flex;
 justify-content:center;
 align-items:center;
+border-radius:50%;
 animation:pulse 2s infinite;
 }
 
-.glow img{
-width:50px;
-height:auto;
+.loader img{
+width:65px;
 }
 
 @keyframes pulse{
 
 0%{
-box-shadow:0 0 15px rgba(0,91,156,.3);
-transform:scale(1);
+box-shadow:0 0 10px rgba(0,91,156,.3);
 }
 
 50%{
-box-shadow:0 0 70px rgba(0,91,156,1);
-transform:scale(1.08);
+box-shadow:0 0 35px rgba(0,91,156,.9);
 }
 
 100%{
-box-shadow:0 0 15px rgba(0,91,156,.3);
-transform:scale(1);
+box-shadow:0 0 10px rgba(0,91,156,.3);
 }
 
 }
 
 header{
-background:#004B8D;
-padding:2px;
+background:#005A9C;
+box-shadow:0 2px 8px rgba(0,0,0,.2);
+}
+
+.topbar{
+max-width:450px;
+margin:auto;
+padding:12px;
+text-align:center;
 }
 
 .logo{
-height:60px;
-display:block;
+height:55px;
 }
 
 .container{
-max-width:300px;
-margin:auto;
-padding:20px 10px;
-flex:1;
+max-width:420px;
+margin:25px auto;
+padding:15px;
 }
 
 .card{
 background:#fff;
+border-radius:18px;
 padding:20px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-max-width:500px;
-margin:auto;
+box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
 
-.certificate{
-width:100%;
-display:block;
-border-radius:12px;
+.title{
+text-align:center;
+margin-bottom:20px;
 }
-footer{
-margin-top:auto;
-background:#005A9C;
-color:#fff;
-padding:2px;
+
+.title h2{
+color:#005A9C;
+margin-bottom:8px;
+font-size:24px;
+}
+
+.title p{
+font-size:14px;
+color:#666;
+}
+
+.status{
+width:170px;
+margin:0 auto 20px;
+padding:10px;
+border-radius:30px;
+text-align:center;
+font-weight:600;
+}
+
+.verified{
+background:#E9F8EF;
+color:#198754;
+}
+
+.certificate img{
+width:100%;
+border-radius:12px;
+border:1px solid #ddd;
+}
+
+.info{
+margin-top:20px;
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+padding:12px 0;
+border-bottom:1px solid #ececec;
+}
+
+.item span{
+color:#666;
+}
+
+.green{
+color:#198754;
+}
+[7/10, 22:35] ch: .qr-section{
+margin-top:25px;
 text-align:center;
 }
 
-.buttons{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:5px;
-margin-bottom:15px;
+.qr-section h3{
+color:#005A9C;
+font-size:18px;
+margin-bottom:12px;
 }
 
-.btn{
-display:inline-block;
-padding:4px 9px;
-background:transparent;
-border:none;
+.qr{
+width:140px;
+height:140px;
+padding:8px;
+background:#fff;
+border:1px solid #ddd;
 border-radius:12px;
-color:#fff;
-text-decoration:none;
-font-weight:bold;
-font-size:7px;
-box-shadow:0 3px 8px rgba(0,0,0,.2);
 transition:.3s;
 }
 
-.btn:hover{
-background:#fff;
-color:#005A9C;
+.qr:hover{
+transform:scale(1.05);
 }
 
-.copy{
-margin-top:5px;
-font-size:5px;
+.scan-text{
+font-size:13px;
+color:#666;
+margin-top:10px;
 }
 
-</style>
+.actions{
+display:flex;
+justify-content:space-between;
+gap:10px;
+margin-top:25px;
+}
 
-</head>
+.actions button{
+flex:1;
+padding:12px;
+border:none;
+border-radius:10px;
+background:#005A9C;
+color:#fff;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
 
-<body>
+.actions button:hover{
+background:#003d6b;
+transform:translateY(-2px);
+}
 
-<div id="splash">
-<div class="glow">
-<img src="logo-blue.png.png" alt="Logo" loading="eager" fetchpriority="high">
-</div>
-</div>
+.actions button i{
+margin-right:6px;
+}
 
-<header>
+.footer-content{
+text-align:center;
+padding:20px;
+background:#005A9C;
+color:#fff;
+margin-top:30px;
+font-size:14px;
+}
 
-<img src="0003.png.png" class="logo">
+.footer-content p{
+margin:5px 0;
+}
 
-</header>
+@media(max-width:480px){
 
-<div class="container">
+.container{
+padding:12px;
+}
 
-<div class="card">
+.card{
+padding:16px;
+border-radius:15px;
+}
 
-<img src="1633265936658.jpg" class="certificate">
+.title h2{
+font-size:20px;
+}
 
-</div>
+.item{
+font-size:14px;
+}
 
-</div>
-<footer>
+.actions{
+flex-direction:column;
+}
 
-<div class="buttons">
+.actions button{
+width:100%;
+}
 
-<a class="btn" href="tel:920024555">
-📞920024555 Call
-</a>
+.qr{
+width:120px;
+height:120px;
+}
 
-<a class="btn" href="mailto:info@es.chamber.org.sa">
-📧 Email
-</a>
+}
+[7/10, 22:36] ch: // Splash Screen
+window.addEventListener("load", () => {
 
-<a class="btn" href="https://es.chamber.org.sa">
-🌐 Website
-</a>
+setTimeout(() => {
 
-</div>
+const splash = document.getElementById("splash");
 
-<div class="copy">
+if(splash){
 
-© Copyright Asharqia Chamber
+splash.style.opacity = "0";
 
-<br><br>
+splash.style.transition = "0.5s";
 
-العربية | English (US)
+setTimeout(()=>{
 
-</div>
+splash.style.display="none";
 
-</footer>
+},500);
 
-<script>
+}
 
-window.addEventListener("load", function(){
-
-setTimeout(function(){
-
-document.getElementById("splash").style.opacity="0";
-
-setTimeout(function(){
-
-document.getElementById("splash").style.display="none";
-
-},50);
-
-},2000);
+},1500);
 
 });
 
-</script>
-</body>
+// Open Certificate
+function openCertificate(){
 
-</html>
+window.open("1633265936658.jpg","_blank");
+
+}
+
+// Copy Details
+function copyCertificate(){
+
+const details = `Certificate Verification
+
+Certificate No: 000145879
+Name: Rajab Ali
+Status: VERIFIED
+Issue Date: 10 July 2026`;
+
+navigator.clipboard.writeText(details);
+
+alert("Certificate details copied.");
+
+}
+
+// Share
+async function shareCertificate(){
+
+if(navigator.share){
+
+try{
+
+await navigator.share({
+
+title:"Certificate Verification",
+
+text:"Verified Certificate",
+
+url:window.location.href
+
+});
+
+}catch(e){}
+
+}else{
+
+navigator.clipboard.writeText(window.location.href);
+
+alert("Link copied.");
+
+}
+
+}
+
+// Card Animation
+document.addEventListener("DOMContentLoaded",()=>{
+
+const card=document.querySelector(".card");
+
+if(card){
+
+card.style.opacity="0";
+
+card.style.transform="translateY(25px)";
+
+setTimeout(()=>{
+
+card.style.transition=".6s";
+
+card.style.opacity="1";
+
+card.style.transform="translateY(0)";
+
+},250);
+
+}
+
+});
+
+// Button Click Effect
+document.querySelectorAll(".actions button").forEach(btn=>{
+
+btn.addEventListener("click",()=>{
+
+btn.style.transform="scale(.95)";
+
+setTimeout(()=>{
+
+btn.style.transform="scale(1)";
+
+},150);
+
+});
+
+});
