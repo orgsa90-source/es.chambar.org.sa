@@ -1,157 +1,20 @@
-<!DOCTYPE html>
+[7/10, 23:26] ch: <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Certificate Verification</title>
 
-<link rel="stylesheet" href="style.css">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-</head>
+<style>
 
-<body>
-
-<!-- Splash -->
-
-<div id="splash">
-
-<div class="loader">
-
-<img src="logo-blue.png" alt="Logo">
-
-</div>
-
-</div>
-
-<!-- Header -->
-
-<header>
-
-<div class="topbar">
-
-<img src="0003.png" class="logo">
-
-</div>
-
-</header>
-
-<!-- Main -->
-
-<main class="container">
-
-<div class="card">
-
-<div class="title">
-
-<h2>Certificate Verification</h2>
-
-<p>This certificate has been verified successfully.</p>
-
-</div>
-
-<div class="status verified">
-
-<i class="fa-solid fa-circle-check"></i>
-
-Verified
-
-</div>
-
-<div class="certificate">
-
-<img src="1633265936658.jpg" alt="Certificate">
-
-</div>
-
-<div class="info">
-
-<div class="item">
-<span>Certificate No</span>
-<strong>000145879</strong>
-</div>
-
-<div class="item">
-<span>Holder Name</span>
-<strong>Rajab Ali</strong>
-</div>
-
-<div class="item">
-<span>Issue Date</span>
-<strong>10 July 2026</strong>
-</div>
-
-<div class="item">
-<span>Status</span>
-<strong class="green">Verified</strong>
-</div>
-[7/10, 22:34] ch: </div>
-
-<!-- QR Code -->
-
-<div class="qr-section">
-
-<h3>QR Verification</h3>
-
-<img src="qr.png" alt="QR Code" class="qr">
-
-<p class="scan-text">
-Scan this QR code to verify this certificate.
-</p>
-
-</div>
-
-<!-- Buttons -->
-
-<div class="actions">
-
-<button onclick="openCertificate()">
-<i class="fa-solid fa-folder-open"></i>
-Open
-</button>
-
-<button onclick="shareCertificate()">
-<i class="fa-solid fa-share-nodes"></i>
-Share
-</button>
-
-<button onclick="copyCertificate()">
-<i class="fa-solid fa-copy"></i>
-Copy
-</button>
-
-</div>
-
-</div>
-
-</main>
-
-<footer>
-
-<div class="footer-content">
-
-<p>© 2026 Asharqia Chamber</p>
-
-<p>العربية | English</p>
-
-</div>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-[7/10, 22:35] ch: *{
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
@@ -191,19 +54,9 @@ width:65px;
 }
 
 @keyframes pulse{
-
-0%{
-box-shadow:0 0 10px rgba(0,91,156,.3);
-}
-
-50%{
-box-shadow:0 0 35px rgba(0,91,156,.9);
-}
-
-100%{
-box-shadow:0 0 10px rgba(0,91,156,.3);
-}
-
+0%{box-shadow:0 0 10px rgba(0,91,156,.3);}
+50%{box-shadow:0 0 35px rgba(0,91,156,.9);}
+100%{box-shadow:0 0 10px rgba(0,91,156,.3);}
 }
 
 header{
@@ -242,8 +95,8 @@ margin-bottom:20px;
 
 .title h2{
 color:#005A9C;
-margin-bottom:8px;
 font-size:24px;
+margin-bottom:8px;
 }
 
 .title p{
@@ -289,7 +142,7 @@ color:#666;
 .green{
 color:#198754;
 }
-[7/10, 22:35] ch: .qr-section{
+[7/10, 23:27] ch: .qr-section{
 margin-top:25px;
 text-align:center;
 }
@@ -395,7 +248,106 @@ height:120px;
 }
 
 }
-[7/10, 22:36] ch: // Splash Screen
+
+</style>
+
+</head>
+
+<body>
+
+<div id="splash">
+<div class="loader">
+<img src="logo-blue.png" alt="Logo">
+</div>
+</div>
+
+<header>
+<div class="topbar">
+<img src="0003.png" class="logo">
+</div>
+</header>
+
+<main class="container">
+
+<div class="card">
+
+<div class="title">
+<h2>Certificate Verification</h2>
+<p>This certificate has been verified successfully.</p>
+</div>
+
+<div class="status verified">
+<i class="fa-solid fa-circle-check"></i>
+Verified
+</div>
+
+<div class="certificate">
+<img src="1633265936658.jpg" alt="Certificate">
+</div>
+
+<div class="info">
+
+<div class="item">
+<span>Certificate No</span>
+<strong>000145879</strong>
+</div>
+
+<div class="item">
+<span>Holder Name</span>
+<strong>Rajab Ali</strong>
+</div>
+
+<div class="item">
+<span>Issue Date</span>
+<strong>10 July 2026</strong>
+</div>
+
+<div class="item">
+<span>Status</span>
+<strong class="green">Verified</strong>
+</div>
+
+</div>
+
+<div class="qr-section">
+
+<h3>QR Verification</h3>
+
+<img src="qr.png" class="qr">
+
+<p class="scan-text">
+Scan this QR code to verify this certificate.
+</p>
+
+</div>
+
+<div class="actions">
+<button onclick="openCertificate()">
+<i class="fa-solid fa-folder-open"></i> Open
+</button>
+
+<button onclick="shareCertificate()">
+<i class="fa-solid fa-share-nodes"></i> Share
+</button>
+
+<button onclick="copyCertificate()">
+<i class="fa-solid fa-copy"></i> Copy
+</button>
+</div>
+
+</div>
+
+</main>
+[7/10, 23:27] ch: <footer>
+<div class="footer-content">
+<p>© 2026 Asharqia Chamber</p>
+<p>العربية | English</p>
+</div>
+</footer>
+
+<script>
+
+// Splash Screen
 window.addEventListener("load", () => {
 
 setTimeout(() => {
@@ -405,13 +357,10 @@ const splash = document.getElementById("splash");
 if(splash){
 
 splash.style.opacity = "0";
-
 splash.style.transition = "0.5s";
 
 setTimeout(()=>{
-
 splash.style.display="none";
-
 },500);
 
 }
@@ -422,12 +371,10 @@ splash.style.display="none";
 
 // Open Certificate
 function openCertificate(){
-
 window.open("1633265936658.jpg","_blank");
-
 }
 
-// Copy Details
+// Copy
 function copyCertificate(){
 
 const details = `Certificate Verification
@@ -438,7 +385,6 @@ Status: VERIFIED
 Issue Date: 10 July 2026`;
 
 navigator.clipboard.writeText(details);
-
 alert("Certificate details copied.");
 
 }
@@ -451,13 +397,9 @@ if(navigator.share){
 try{
 
 await navigator.share({
-
 title:"Certificate Verification",
-
 text:"Verified Certificate",
-
 url:window.location.href
-
 });
 
 }catch(e){}
@@ -465,7 +407,6 @@ url:window.location.href
 }else{
 
 navigator.clipboard.writeText(window.location.href);
-
 alert("Link copied.");
 
 }
@@ -477,27 +418,20 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 const card=document.querySelector(".card");
 
-if(card){
-
 card.style.opacity="0";
-
 card.style.transform="translateY(25px)";
 
 setTimeout(()=>{
 
 card.style.transition=".6s";
-
 card.style.opacity="1";
-
 card.style.transform="translateY(0)";
 
 },250);
 
-}
-
 });
 
-// Button Click Effect
+// Button Animation
 document.querySelectorAll(".actions button").forEach(btn=>{
 
 btn.addEventListener("click",()=>{
@@ -513,3 +447,8 @@ btn.style.transform="scale(1)";
 });
 
 });
+
+</script>
+
+</body>
+</html>
