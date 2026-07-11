@@ -40,17 +40,34 @@ z-index:9999;
 }
 
 .loader{
-width:90px;
-height:90px;
+width:180px;
+height:180px;
+border-radius:50%;
+background:linear-gradient(135deg,#2458d3,#00a67c);
 display:flex;
 justify-content:center;
 align-items:center;
-border-radius:50%;
+position:relative;
 animation:pulse 2s infinite;
+overflow:hidden;
+}
+
+.loader::before{
+content:"";
+position:absolute;
+width:90px;
+height:90px;
+border-radius:50%;
+background:linear-gradient(135deg,#2b6cff,#00d084);
+right:28px;
+top:45px;
+opacity:.45;
 }
 
 .loader img{
-width:65px;
+width:95px;
+position:relative;
+z-index:2;
 }
 
 @keyframes pulse{
