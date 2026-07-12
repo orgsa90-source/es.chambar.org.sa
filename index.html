@@ -40,64 +40,23 @@ z-index:9999;
 }
 
 .loader{
-    width:100px;
-    height:100px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
+width:90px;
+height:90px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+animation:pulse 2s infinite;
 }
 
 .loader img{
-    width:70px;
-    position:relative;
-    z-index:2;
+width:65px;
 }
 
-.loader::before{
-    content:"";
-    position:absolute;
-    width:170px;
-    height:170px;
-    border-radius:50%;
-    background: linear-gradient(135deg,
-#6f9ef4 0%,
-#7fb4f8 25%,
-#98cdfc 50%,
-#bfeef4 75%,
-#eefdfd 100%);
-    #8cc1ff 70%,
-    #73a8f5 85%,
-    #5b8fe8 100%
-);
-
-filter: blur(5px) brightness(1.15) saturate(1.15);
-    
-    animation:sunGlow .8s ease-out infinite;
-}
-
-@keyframes sunGlow{
-
-0%{
-    transform:scale(.25);
-    opacity:.2;
-}
-
-40%{
-    transform:scale(.8);
-    opacity:.95;
-}
-
-70%{
-    transform:scale(1.15);
-    opacity:.55;
-}
-
-100%{
-    transform:scale(1.5);
-    opacity:0;
-}
-
+@keyframes pulse{
+0%{box-shadow:0 0 10px rgba(0,91,156,.3);}
+50%{box-shadow:0 0 35px rgba(0,91,156,.9);}
+100%{box-shadow:0 0 10px rgba(0,91,156,.3);}
 }
 
 header{
@@ -379,24 +338,24 @@ Scan this QR code to verify this certificate.
 <script>
 
 // Splash Screen
-document.addEventListener("DOMContentLoaded", () => {
-
-const splash = document.getElementById("splash");
+window.addEventListener("load", () => {
 
 setTimeout(() => {
+
+const splash = document.getElementById("splash");
 
 if(splash){
 
 splash.style.opacity = "0";
-splash.style.transition = "0.1s";
+splash.style.transition = "0.5s";
 
 setTimeout(()=>{
-splash.remove();
-},250);
+splash.style.display="none";
+},500);
 
 }
 
-},7000);
+},1500);
 
 });
 
@@ -456,7 +415,7 @@ card.style.transition=".6s";
 card.style.opacity="1";
 card.style.transform="translateY(0)";
 
-},100);
+},250);
 
 });
 
