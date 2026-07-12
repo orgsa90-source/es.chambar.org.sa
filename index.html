@@ -372,24 +372,25 @@ Scan this QR code to verify this certificate.
 
 <script>
 
-// Splash Screen = document.addEventListener("DOMContentLoaded", () => {
-
-setTimeout(() => {
+// Splash Screen
+document.addEventListener("DOMContentLoaded", () => {
 
 const splash = document.getElementById("splash");
+
+setTimeout(() => {
 
 if(splash){
 
 splash.style.opacity = "0";
-splash.style.transition = "0.2s";
+splash.style.transition = "0.25s";
 
 setTimeout(()=>{
-splash.style.display="none";
-},100);
+splash.remove();
+},250);
 
 }
 
-},0);
+},150);
 
 });
 
